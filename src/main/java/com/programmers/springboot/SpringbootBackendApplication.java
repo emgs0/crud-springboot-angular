@@ -1,13 +1,13 @@
 package com.programmers.springboot;
 
-import org.springframework.boot.SpringApplication;
+import com.programmers.springboot.controller.UIApplication;
+import javafx.application.Application;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringbootBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBackendApplication.class, args);
+		Application.launch(UIApplication.class, args);
 	}
-
 }

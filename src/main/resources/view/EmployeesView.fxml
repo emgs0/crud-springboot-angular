@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.programmers.springboot.controller.EmployeesViewController">
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#doRefresh" text="Recargar" />
+          <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#onSave" text="Agregar" />
+            <Button fx:id="btnModificar" layoutX="140.0" layoutY="13.0" mnemonicParsing="false" onAction="#onUpdate" text="Modificar" />
+        </items>
+      </ToolBar>
+   </bottom>
+   <center>
+      <TableView fx:id="table" prefHeight="360.0" prefWidth="373.0" BorderPane.alignment="CENTER">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleModificar" text="Modificar" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleEliminar" text="Eliminar" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleRecargar" text="Recargar" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+         <BorderPane.margin>
+            <Insets bottom="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin></TableView>
+   </center>
+   <left>
+      <VBox prefHeight="360.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Nombre">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtNombre" alignment="CENTER">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="CENTER" text="Apellido" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtApellido" alignment="CENTER">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="CENTER" text="Email" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtEmail" alignment="CENTER">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+</BorderPane>

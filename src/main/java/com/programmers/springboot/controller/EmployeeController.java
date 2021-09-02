@@ -26,14 +26,14 @@ public class EmployeeController {
         return employeeRepository.findAll();
     }
 
-    //create employee rest api
+    //crear employee rest api
     @PostMapping("/employees")
     @ResponseStatus(HttpStatus.CREATED)
     public Employee createEmployee(@RequestBody Employee employee){
         return employeeRepository.save(employee);
     }
 
-    //get employee using ID rest api
+    //get employee usando ID rest api
     @GetMapping("/employees/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id){
         Employee employee = employeeRepository.findById(id)

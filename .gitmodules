@@ -1,0 +1,3 @@
+[submodule "front-end-employees"]
+	path = front-end-employees
+	url = https://github.com/emgs0/front-end-employees.git
