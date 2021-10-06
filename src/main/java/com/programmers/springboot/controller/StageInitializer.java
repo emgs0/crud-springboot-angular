@@ -6,7 +6,6 @@
 package com.programmers.springboot.controller;
 
 import com.programmers.springboot.controller.UIApplication.StageReadyEvent;
-import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,6 +15,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
+
+import java.io.IOException;
 
 /**
  *
